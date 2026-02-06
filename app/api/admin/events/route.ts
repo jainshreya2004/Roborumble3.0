@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+export const dynamic = "force-dynamic";
 import { auth } from "@clerk/nextjs/server";
 import connectDB from "@/lib/mongodb";
 import Event, { generateSlug, parseTeamSize } from "@/app/models/Event";
