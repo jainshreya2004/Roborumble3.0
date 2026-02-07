@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 
 import Navbar from "../components/Navbar";
 import MatrixBackground from "../components/MatrixBackground";
@@ -7,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Linkedin, Mail, ShieldCheck, Cpu, Terminal, Instagram } from "lucide-react";
 import { useAudio } from "../hooks/useAudio";
+import { SlotText } from "../components/SlotText";
 
 // --- Types ---
 interface TeamMember {
@@ -66,6 +68,81 @@ const contributors: Contributor[] = [
     instagram: "https://www.instagram.com/ashutosh__satya67",
     linkedin: "https://www.linkedin.com/in/ashutosh-satya-37340b382?utm_source=share&utm_campaign=share_via&utm_content",
     email: "sarojashutosh89@gmail.com"
+  }
+];
+
+const studentCoordinators: TeamMember[] = [
+  {
+    name: "Saurabh Keshri",
+    role: "Student Coordinator",
+    dept: "IT, 4th Year",
+    image: "/Saurabh.jpeg",
+    bio: "Lead coordinator ensuring seamless execution of all robotics events."
+  },
+  {
+    name: "Anuj Gupta",
+    role: "Student Coordinator",
+    dept: "IT, 4th Year",
+    image: "/Anuj.jpeg",
+    bio: "Strategist and technical lead for the Roborumble initiative."
+  },
+  {
+    name: "Ayush Jaiswal",
+    role: "Student Coordinator",
+    dept: "IT, 4th Year",
+    image: "/Ayush.jpeg",
+    bio: "Managing logistics and team coordination for efficient workflows."
+  }
+];
+
+const eventManagement: TeamMember[] = [
+  {
+    name: "Mohd. Kaif",
+    role: "Event Management",
+    dept: "IT, 3rd Year",
+    image: "/Kaif.jpeg",
+    bio: "Coordinating on-ground activities and resource allocation."
+  },
+  {
+    name: "Aditya Kumar Singh",
+    role: "Event Management",
+    dept: "IT, 3rd Year",
+    image: "/Aditya.jpeg",
+    bio: "Ensuring smooth flow of events and participant engagement."
+  }
+];
+
+const technicalLeads: TeamMember[] = [
+  {
+    name: "Mukut Kumar",
+    role: "Technical Lead",
+    dept: "IT, 3rd Year",
+    image: "/Mukut.jpeg",
+    bio: "Head of technical operations and innovation strategies."
+  },
+  {
+    name: "Shreya Jain",
+    role: "Technical Lead",
+    dept: "IT, 3rd Year",
+    image: "/Shreya.jpeg",
+    bio: "Driving software architecture and system integration."
+  }
+];
+
+const mediaPR: TeamMember[] = [
+  {
+    name: "Mohd. Kaif",
+    role: "Media & PR",
+    dept: "IT, 3rd Year",
+    image: "/Kaif.jpeg",
+    bio: "Managing public relations and social media presence."
+  },
+  {
+    name: "Akshat Darshi",
+    role: "Media & PR",
+    dept: "IT, 3rd Year",
+    image: "/Akshat.jpeg",
+    bio: "Content strategy and brand communication lead."
   }
 ];
 
